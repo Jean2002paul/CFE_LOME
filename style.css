@@ -66,6 +66,16 @@ a {
 /* ======================== */
 /*     ANIMATIONS / FX      */
 /* ======================== */
+
+.section-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -302,6 +312,32 @@ a {
 /* ======================== */
 /*        FOOTER            */
 /* ======================== */
+
+/* Bouton flottant formulaire Google Forms */
+.floating-cta {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FFD600;
+    color: #222;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    z-index: 1050;
+}
+.floating-cta.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.floating-cta:hover {
+    background-color: #0b5ed7;
+}
+
 .footer {
     background-color: var(--dark);
     color: var(--light);
@@ -362,17 +398,74 @@ a[href^="http"]:after {
     padding: 8px 20px;
     font-weight: 600;
     transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    opacity: 1;
+    position: static;
 }
 
 .cta-button:hover {
     background-color: #0056b3;
     color: #fff;
+    opacity: 1;
+}
+
+/* Bouton flottant unique */
+.floating-cta {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 9999;
+    background: #007bff;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    display: none;
+}
+
+.floating-cta:hover {
+    background: #0056b3;
+    color: #fff;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+}
+
+.cta-button-fixed {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 1050;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+    opacity: 0.95;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 /* ======================== */
 /*        RESPONSIVE        */
 /* ======================== */
+@media (max-width: 991px) {
+    .cta-button-fixed {
+        display: none !important;
+    }
+}
+
 @media (max-width: 768px) {
+    .cta-button-fixed {
+        bottom: 16px;
+        right: 16px;
+        padding: 10px 16px;
+        font-size: 1rem;
+    }
+
     .hero h1 {
         font-size: 32px;
     }
