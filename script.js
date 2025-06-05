@@ -1,57 +1,132 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+// ========== OPTIMISATION SCRIPT CFE LOME ==========
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+            const target = document.querySelector(anchor.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
     });
-});
 
-// Header scroll effect
-const header = document.querySelector('header');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll <= 0) {
-        header.classList.remove('scroll-up');
-        return;
-    }
-
-    if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-        // Scrolling down
-        header.classList.remove('scroll-up');
-        header.classList.add('scroll-down');
-    } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-        // Scrolling up
-        header.classList.remove('scroll-down');
-        header.classList.add('scroll-up');
-    }
-    lastScroll = currentScroll;
-});
-
-// Menu Hamburger
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-});
-
-// Fermer le menu hamburger quand on clique sur un lien
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('active');
+    // Navbar scroll effect
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (!navbar) return;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop <= 0) {
+            navbar.classList.remove('scrolled', 'hidden');
+            return;
+        }
+        navbar.classList.add('scrolled');
+        if (scrollTop > lastScrollTop) {
+            navbar.classList.add('hidden');
+        } else {
+            navbar.classList.remove('hidden');
+        }
+        lastScrollTop = scrollTop;
     });
+
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.navbar-toggler');
+    const navMenu = document.querySelector('.navbar-collapse');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('collapsed');
+            navMenu.classList.toggle('show');
+        });
+        document.querySelectorAll('.navbar-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.add('collapsed');
+                navMenu.classList.remove('show');
+            });
+        });
+    }
+
+    // Scroll-triggered animations
+    const observer = new window.IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.feature-item, .stat-card, .module-card').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Contact form handling
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            const errors = [];
+            for (const [key, value] of formData.entries()) {
+                if (!value.trim() && key !== 'objet') {
+                    errors.push(`Le champ ${key} est requis.`);
+                }
+            }
+            if (errors.length > 0) {
+                alert(errors.join('\n'));
+                return;
+            }
+            contactForm.classList.add('submitted');
+            setTimeout(() => {
+                alert('Votre message a été envoyé avec succès !');
+                contactForm.reset();
+                contactForm.classList.remove('submitted');
+            }, 1000);
+        });
+    }
+
+    // Newsletter form handling
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const emailInput = newsletterForm.querySelector('input[type="email"]');
+            const email = emailInput.value.trim();
+            if (!email || !email.includes('@')) {
+                alert('Veuillez entrer une adresse email valide.');
+                return;
+            }
+            newsletterForm.classList.add('submitted');
+            setTimeout(() => {
+                alert('Merci pour votre inscription à la newsletter !');
+                emailInput.value = '';
+                newsletterForm.classList.remove('submitted');
+            }, 1000);
+        });
+    }
+
+    // Hover animation on cards (CSS already handles, but JS for fallback)
+    document.querySelectorAll('.feature-item, .stat-card, .module-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-5px)';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+        });
+    });
+
+    // External link confirmation
+    document.querySelectorAll('a[href^="http"]').forEach(link => {
+        link.addEventListener('click', e => {
+            if (!link.href.includes(window.location.hostname)) {
+                e.preventDefault();
+                if (confirm('Voulez-vous quitter le site ?')) {
+                    window.open(link.href, '_blank');
+                }
+            }
+        });
+    });
+
+    // DOM loaded animation trigger
+    document.body.classList.add('loaded');
 });
 
-// Form submission handling
-const postulerButton = document.querySelector('.cta-button');
-postulerButton.addEventListener('click', () => {
-    // Here you would typically open a modal or redirect to a form page
-    alert('Formulaire de candidature à venir !');
-});
