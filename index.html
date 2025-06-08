@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pré-incubateur CEF Lomé - Accompagnement entrepreneurial pour les étudiants et jeunes diplômés</title>
+    <link rel="icon" type="image/png" href="assets/auf.jpg" />
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -43,6 +45,9 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
+                            <a class="nav-link" href="#contexte">Contexte</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#objectifs">Objectifs</a>
                         </li>
                         <li class="nav-item">
@@ -79,295 +84,681 @@
                 </div>
                 <div class="stat-item">
                     <h3>25</h3>
-                    <p>Participants</p>
+                    <p>Bénéficiaires</p>
                 </div>
             </div>
             <a href="https://shorturl.at/Nu0yJ" class="cta-button" target="_blank">Postuler maintenant</a>
         </div>
     </section>
 
-    <section id="objectifs" class="objectives">
+    <!--section contexte-->     
+    <section id="contexte" class="text-center py-5">
+  <div class="container">
+    <h2 class="mb-4">Contexte</h2>
+    <p class="mb-3">
+      Dans un contexte où le chômage des jeunes diplômés ne cesse de croître, il devient essentiel de mettre en place des initiatives concrètes pour accompagner les jeunes dans leur insertion professionnelle.
+    </p>
+    <p class="mb-3">
+      Le Centre d’Entrepreneuriat et de Formation (CEF) de Lomé s’inscrit dans cette dynamique en proposant un programme de pré-incubation qui vise à outiller les jeunes ayant une idée d’entreprise mais manquant de ressources, d’orientation ou de formation pour la concrétiser.
+    </p>
+    <p>
+      Ce programme répond au besoin urgent de création d’emplois, de valorisation des talents locaux et de développement d’un écosystème entrepreneurial solide et durable.
+    </p>
+  </div>
+</section>
+
+
+<!--section contexte end-->
+
+
+         <!--section pourquoi la CEF-->
+        <section id="pourquoi" class="text-center py-5">
+  <div class="container">
+    <h2 class="mb-4">Pourquoi la Pré-incubateur <strong>CEF-LOMÉ</strong> ?</h2>
+    <p class="mb-3">
+      Le Pré-incubateur du CEF de Lomé est un programme d’accompagnement destiné aux jeunes étudiants et diplômés qui ont une idée d’entreprise, mais ne savent pas par quoi commencer jusqu’à la concrétisation.
+    </p>
+    <p class="mb-3">
+      Le programme va permettre de transformer les idées des jeunes en un projet structuré et concret grâce à des formations pratiques, à du coaching, à du mentorat et des ateliers pratiques. 
+    </p>
+    <p class="mb-3">
+      Les bénéficiaires apprendront à construire un business plan, développer un prototype, mieux comprendre le marché, gérer les finances et présenter leur projet devant des partenaires.
+    </p>
+    <p>
+      Ce programme vise à renforcer les capacités des jeunes, favoriser la création de petites entreprises tout en restant autonome et surtout préparer les jeunes à intégrer des incubateurs ou à lancer directement leur activité.
+    </p>
+  </div>
+</section>
+
+
+         <!--section end-->
+   <section id="objectifs" class="objectives">
+  <div class="container">
+    <h2>Objectifs</h2>
+    <p style="font-size: 1.25rem; color: #555; max-width: 700px; margin: 0 auto 40px;">
+      6 mois d'accompagnement intensif pour 25 jeunes entrepreneurs ambitieux. 
+      Formations, prototypage, coaching et pitch final pour concrétiser vos projets.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Renforcement des capacités</h3>
+        <p>Renforcer les capacités entrepreneuriales des Bénéficiaires</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-project-diagram"></i>
+        <h3>Accompagnement</h3>
+        <p>Accompagnement dans la formalisation et le prototypage des projets</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Compétences</h3>
+        <p>Fournir des compétences en gestion, marketing et finance</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-users"></i>
+        <h3>Mentorat</h3>
+        <p>Faciliter l'accès à des mentors et experts sectoriels</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #objectifs {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 18px;
+    background: #f0f4ff; /* optionnel, fond léger */
+  }
+
+  #objectifs h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color:  rgb(20, 5, 88);
+  }
+
+  #objectifs .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  #objectifs .card {
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  #objectifs .card:hover {
+    transform: translateY(-8px);
+  }
+
+  #objectifs .card i {
+    font-size: 2.8rem;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+
+  #objectifs .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #222;
+  }
+
+  #objectifs .card p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #555;
+  }
+
+  /* Responsive (optionnel) */
+  @media (max-width: 600px) {
+    #objectifs .cards {
+      flex-direction: column;
+      gap: 20px;
+    }
+    #objectifs .card {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
+</style>
+
+
+
+
+
+    <!--section programme-->
+    <section class="timeline">
         <div class="container">
-            <h2>Objectifs</h2>
-            <div class="cards">
-                <div class="card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>Renforcement des capacités</h3>
-                    <p>Renforcer les capacités entrepreneuriales des participants</p>
+            <h2 class="section-title">Programme en 6 étapes</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Mois 1-2: Fondations</h3>
+                        <p>Formations sur l'entrepreneuriat, validation d'idée et étude de marché approfondie.</p>
+                    </div>
+                    <div class="timeline-marker">1</div>
                 </div>
-                <div class="card">
-                    <i class="fas fa-project-diagram"></i>
-                    <h3>Accompagnement</h3>
-                    <p>Accompagnement dans la formalisation et le prototypage des projets</p>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Mois 3-4: Développement</h3>
+                        <p>Création du business model, développement du prototype et tests utilisateurs.</p>
+                    </div>
+                    <div class="timeline-marker">2</div>
                 </div>
-                <div class="card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Compétences</h3>
-                    <p>Fournir des compétences en gestion, marketing et finance</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-users"></i>
-                    <h3>Mentorat</h3>
-                    <p>Faciliter l'accès à des mentors et experts sectoriels</p>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Mois 5-6: Finalisation</h3>
+                        <p>Perfectionnement du pitch, préparation au lancement et présentation finale.</p>
+                    </div>
+                    <div class="timeline-marker">3</div>
                 </div>
             </div>
         </div>
-    </section>
+        <style>
+            /* Timeline Section */
+        .timeline {
+            padding: 80px 0;
+            background: var(--light-gray);
+            position: relative;
+        }
 
-    <section id="programme" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>À propos du programme</h2>
-                    <p class="lead">Programme d'accompagnement entrepreneurial pour les étudiants et jeunes diplômés</p>
-                    <div class="program-features">
-                        <div class="feature-item">
-                            <i class="fas fa-clock"></i>
-                            <h4>Durée</h4>
-                            <p>6 mois (février à juillet 2025)</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-users"></i>
-                            <h4>Public cible</h4>
-                            <p>25 étudiants porteurs d'idées des universités membres de l'AUF Togo</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <h4>Objectif</h4>
-                            <p>Renforcer les capacités entrepreneuriales et favoriser la création d'entreprises viables</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="program-stats">
-                        <div class="stat-card">
-                            <h3>9 modules</h3>
-                            <p>de formation spécialisée</p>
-                        </div>
-                        <div class="stat-card">
-                            <h3>25 participants</h3>
-                            <p>par promotion</p>
-                        </div>
-                        <div class="stat-card">
-                            <h3>6 mois</h3>
-                            <p>de formation et d'accompagnement</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-12">
-                    <h3>Contexte</h3>
-                    <p>Le contexte socio-économique actuel au Togo met en évidence la nécessité d'accompagner les jeunes étudiants dans le développement de leurs projets entrepreneuriaux. Malgré des idées innovantes, beaucoup de ces jeunes rencontrent des difficultés à transformer leurs concepts en entreprises viables.</p>
-                    <div class="context-image mt-4">
-                        <img src="assets/photo2.jpeg" alt="Étudiants en formation" class="img-fluid rounded">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            width: 45%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .timeline-marker {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-purple);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        /* Form Section */
+        .form-section {
+            padding: 80px 0;
+            background: var(--primary-purple);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .form-cta {
+            background: var(--white);
+            color: var(--primary-purple);
+            padding: 20px 50px;
+            border-radius: 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .form-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+        }
+        </style>
+    </section>
+<!--section programme end-->
     <section id="modules" class="modules">
-        <div class="container">
-            <h2>Programme de formation</h2>
-            <div class="row">
-                <div class="col-12 mb-4">
-                
-                </div>
-                <div class="col-md-4">
-                    <div class="module-card">
-                        <h3>Module 1 : Introduction à l'Entrepreneuriat</h3>
-                        <ul class="module-content">
-                            <li>Idée d'entreprise & Profil Entrepreneurial Personnel</li>
-                            <li>Identification et Validation de l'idée d'entreprise</li>
-                            <li>Caractéristiques d'un bon entrepreneur</li>
-                            <li>Diagnostic du potentiel entrepreneurial personnel</li>
-                            <li>Analyse de l'écosystème entrepreneurial du Togo</li>
-                            <li>Cartographie des structures d'appui à l'entrepreneuriat</li>
-                            <li>Secteurs porteurs du Togo</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="module-card">
-                        <h3>Module 2 : Business Model et Plan d'Affaires</h3>
-                        <ul class="module-content">
-                            <li>Présentation du BMC</li>
-                            <li>Introduction au BMC : Présentation et explications</li>
-                            <li>Application des (9+1) blocs du BMC</li>
-                            <li>Remplissage du BMC à l'aide des post-it</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="module-card">
-                        <h3>Module 3 : Plan Marketing</h3>
-                        <ul class="module-content">
-                            <li>Définition et objectifs du plan marketing</li>
-                            <li>Analyse du positionnement et de la concurrence</li>
-                            <li>Développement du Mix-marketing</li>
-                            <li>Compétences en stratégie marketing et communication</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <div class="module-card">
-                        <h3>Module 4 : Plan de Production</h3>
-                        <ul class="module-content">
-                            <li>Introduction au plan de production</li>
-                            <li>Comprendre le processus de production</li>
-                            <li>Prévisions et planification de la production</li>
-                            <li>Compétences techniques et organisationnelles</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="module-card">
-                        <h3>Module 5 : Gestion des Ressources</h3>
-                        <ul class="module-content">
-                            <li>Introduction à la gestion des ressources</li>
-                            <li>Identification des besoins en ressources matérielles</li>
-                            <li>Gestion des ressources humaines</li>
-                            <li>Planification des ressources matérielles et humaines</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="module-card">
-                        <h3>Module 6 : Plan Financier</h3>
-                        <ul class="module-content">
-                            <li>Introduction à la gestion financière</li>
-                            <li>Structure et composantes du plan financier</li>
-                            <li>Compte de résultat prévisionnel</li>
-                            <li>Bilan prévisionnel</li>
-                            <li>Plan de trésorerie prévisionnel</li>
-                            <li>Besoin en fonds de roulement (BFR)</li>
-                            <li>Plan de financement</li>
-                            <li>Prévisions et scénarios financiers</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <div class="module-card">
-                        <h3>Module 7 : Business Plan</h3>
-                        <ul class="module-content">
-                            <li>Introduction au business plan</li>
-                            <li>Rédaction du business plan</li>
-                            <li>Techniques de levée de fonds</li>
-                            <li>Structuration du financement</li>
-                            <li>Négociation avec les investisseurs</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="module-card">
-                        <h3>Module 8 : Prototypage</h3>
-                        <ul class="module-content">
-                            <li>Introduction au prototypage</li>
-                            <li>Processus de création du prototype</li>
-                            <li>Test et validation du prototype</li>
-                            <li>Prototypage et modèles économiques</li>
-                            <li>Prototypage et développement durable</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="module-card">
-                        <h3>Module 9 : Pitch et Networking</h3>
-                        <ul class="module-content">
-                            <li>Introduction au Pitch</li>
-                            <li>Techniques de présentation efficace</li>
-                            <li>Personnalisation du Pitch</li>
-                            <li>Stratégies de Networking</li>
-                            <li>Participation à des événements</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <h2>Programme de formation</h2>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <div class="module-card">
+          <h3>Module 1 : Introduction à l'Entrepreneuriat</h3>
+          <ul class="module-content">
+            <li>Idée d'entreprise & Profil Entrepreneurial Personnel</li>
+            <li>Identification et Validation de l'idée d'entreprise</li>
+            <li>Caractéristiques d'un bon entrepreneur</li>
+            <li>Diagnostic du potentiel entrepreneurial personnel</li>
+            <li>Analyse de l'écosystème entrepreneurial du Togo</li>
+            <li>Cartographie des structures d'appui à l'entrepreneuriat</li>
+            <li>Secteurs porteurs du Togo</li>
+          </ul>
         </div>
-    </section>
+      </div>
+      <div class="col-md-4">
+        <div class="module-card">
+          <h3>Module 2 : Business Model et Plan d'Affaires</h3>
+          <ul class="module-content">
+            <li>Présentation du BMC</li>
+            <li>Introduction au BMC : Présentation et explications</li>
+            <li>Application des (9+1) blocs du BMC</li>
+            <li>Remplissage du BMC à l'aide des post-it</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="module-card">
+          <h3>Module 3 : Plan Marketing</h3>
+          <ul class="module-content">
+            <li>Définition et objectifs du plan marketing</li>
+            <li>Analyse du positionnement et de la concurrence</li>
+            <li>Développement du Mix-marketing</li>
+            <li>Compétences en stratégie marketing et communication</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contactez-nous</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="contact-details">
-                                <h4>Adresse</h4>
-                                <p>Centre d'Employabilité Francophone</p>
-                                <p>Université de Lomé, Togo</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div class="contact-details">
-                                <h4>Email</h4>
-                                <p>contact@cef-lome.org</p>
-                                <p>incubateur@cef-lome.org</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div class="contact-details">
-                                <h4>Téléphone</h4>
-                                <p>+228 20 XX XX XX</p>
-                                <p>+228 90 XX XX XX</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="contact-form">
-                        <h4>Formulaire de contact</h4>
-                        <form id="contact-form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Votre nom" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Votre email" required>
-                            </div>
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option value="">Objet du message</option>
-                                    <option>Informations sur le programme</option>
-                                    <option>Demande de candidature</option>
-                                    <option>Autre</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" rows="4" placeholder="Votre message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Envoyer</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="social-links mt-5">
-                <h4>Suivez-nous</h4>
-                <div class="social-icons">
-                    <a href="#" class="social-icon" title="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="social-icon" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-icon" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="social-icon" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="module-card">
+          <h3>Module 4 : Plan de Production</h3>
+          <ul class="module-content">
+            <li>Introduction au plan de production</li>
+            <li>Comprendre le processus de production</li>
+            <li>Prévisions et planification de la production</li>
+            <li>Compétences techniques et organisationnelles</li>
+          </ul>
         </div>
-    </section>
+      </div>
+      <div class="col-md-4">
+        <div class="module-card">
+          <h3>Module 5 : Gestion des Ressources</h3>
+          <ul class="module-content">
+            <li>Introduction à la gestion des ressources</li>
+            <li>Identification des besoins en ressources matérielles</li>
+            <li>Gestion des ressources humaines</li>
+            <li>Planification des ressources matérielles et humaines</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="module-card">
+          <h3>Module 6 : Plan Financier</h3>
+          <ul class="module-content">
+            <li>Introduction à la gestion financière</li>
+            <li>Structure et composantes du plan financier</li>
+            <li>Compte de résultat prévisionnel</li>
+            <li>Bilan prévisionnel</li>
+            <li>Plan de trésorerie prévisionnel</li>
+            <li>Besoin en fonds de roulement (BFR)</li>
+            <li>Plan de financement</li>
+            <li>Prévisions et scénarios financiers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="module-card">
+          <h3>Module 7 : Business Plan</h3>
+          <ul class="module-content">
+            <li>Introduction au business plan</li>
+            <li>Rédaction du business plan</li>
+            <li>Techniques de levée de fonds</li>
+            <li>Structuration du financement</li>
+            <li>Négociation avec les investisseurs</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="module-card">
+          <h3>Module 8 : Prototypage</h3>
+          <ul class="module-content">
+            <li>Introduction au prototypage</li>
+            <li>Processus de création du prototype</li>
+            <li>Test et validation du prototype</li>
+            <li>Prototypage et modèles économiques</li>
+            <li>Prototypage et développement durable</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="module-card">
+          <h3>Module 9 : Pitch et Networking</h3>
+          <ul class="module-content">
+            <li>Introduction au Pitch</li>
+            <li>Techniques de présentation efficace</li>
+            <li>Personnalisation du Pitch</li>
+            <li>Stratégies de Networking</li>
+            <li>Participation à des événements</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  #modules {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 18px;
+    background: #f9faff; /* fond léger */
+  }
+
+  #modules h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: rgb(20, 5, 88);
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .col-md-4 {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+
+  .module-card {
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .module-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .module-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #222;
+  }
+
+  .module-content {
+    list-style: disc inside;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #555;
+    flex-grow: 1;
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .col-md-4 {
+      flex: 0 0 45%;
+      max-width: 45%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+</style>
+<!--section modules end-->
+<!-- Gallery Section -->
+<section class="gallery">
+  <div class="container">
+    <h2 class="section-title">Galerie</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="assets/WhatsApp Image 2025-06-08 à 15.07.08_8f9bdb4e.jpg" alt="Photo 1">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/WhatsApp Image 2025-06-08 à 15.07.08_d1fb5d0e.jpg" alt="Photo 2">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .gallery {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+
+  .gallery .section-title {
+    font-size: 2rem;
+    color: rgb(20, 5, 88);
+    margin-bottom: 40px;
+  }
+
+  .gallery-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .gallery-item {
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item img:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+<!-- Gallery Section End -->
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container" style="max-width: 700px; margin: 0 auto; text-align: center;">
+    <h2>Contactez-nous</h2>
+    <div class="contact-info" style="display: inline-block; text-align: left; margin-top: 20px; width: 100%;">
+      <div class="contact-item" style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+        <i class="fas fa-map-marker-alt" style="font-size: 24px; color: #004080; margin-right: 15px; flex-shrink: 0;"></i>
+        <div class="contact-details">
+          <h4 style="margin-bottom: 5px;">Adresse</h4>
+          <p>Centre d'Employabilité Francophone</p>
+          <p>Université de Lomé, Togo</p>
+        </div>
+      </div>
+      <div class="contact-item" style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+        <i class="fas fa-envelope" style="font-size: 24px; color: #004080; margin-right: 15px; flex-shrink: 0;"></i>
+        <div class="contact-details">
+          <h4 style="margin-bottom: 5px;">Email</h4>
+          <p><a href="mailto:contact@cef-lome.org" style="color: inherit; text-decoration: none;">contact@cef-lome.org</a></p>
+          <p><a href="mailto:incubateur@cef-lome.org" style="color: inherit; text-decoration: none;">incubateur@cef-lome.org</a></p>
+        </div>
+      </div>
+      <div class="contact-item" style="display: flex; align-items: flex-start;">
+        <i class="fas fa-phone" style="font-size: 24px; color: #004080; margin-right: 15px; flex-shrink: 0;"></i>
+        <div class="contact-details">
+          <h4 style="margin-bottom: 5px;">Téléphone</h4>
+          <p>+228 20 XX XX XX</p>
+          <p>+228 90 XX XX XX</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--contact end-->
+<!-- FAQ Section -->
+                <section class="faq" style="padding: 40px 20px; background-color: #f9f9f9;">
+  <div class="container" style="max-width: 700px; margin: 0 auto; text-align: center;">
+    <h2 class="section-title" style="color: rgb(20, 5, 88); margin-bottom: 30px;">Questions Fréquentes</h2>
+    
+    <div class="faq-item" style="text-align: left;">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Qui peut postuler au programme Pre-IJE ?
+      </div>
+      <div class="faq-answer" style="display: none;">
+        Tous les jeunes de 18 à 35 ans ayant une idée d'entreprise innovante et la motivation de la concrétiser peuvent postuler.
+      </div>
+    </div>
+    
+    <div class="faq-item" style="text-align: left;">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Le programme est-il gratuit ?
+      </div>
+      <div class="faq-answer" style="display: none;">
+        Oui, le programme Pre-IJE est entièrement gratuit pour les participants sélectionnés.
+      </div>
+    </div>
+    
+    <div class="faq-item" style="text-align: left;">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Quand débutera la première cohorte ?
+      </div>
+      <div class="faq-answer" style="display: none;">
+        La première cohorte débutera en septembre 2025. Les candidatures sont ouvertes jusqu'en août 2025.
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-question {
+    cursor: pointer;
+    padding: 15px 20px;
+    background-color: #004080;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+  .faq-question:hover {
+    background-color: #0066cc;
+  }
+  .faq-answer {
+    padding: 15px 20px;
+    background-color: #e6f0ff;
+    border-left: 4px solid #004080;
+    margin-bottom: 15px;
+    border-radius: 0 5px 5px 5px;
+    font-size: 1rem;
+    color: #333;
+  }
+</style>
+
+<script>
+  function toggleFaq(element) {
+    const allAnswers = document.querySelectorAll('.faq-answer');
+    const allQuestions = document.querySelectorAll('.faq-question');
+    
+    const answer = element.nextElementSibling;
+    
+    if (answer.style.display === 'block') {
+      answer.style.display = 'none';
+      element.style.backgroundColor = '#004080';
+    } else {
+      allAnswers.forEach(ans => ans.style.display = 'none');
+      allQuestions.forEach(q => q.style.backgroundColor = '#004080');
+      answer.style.display = 'block';
+      element.style.backgroundColor = '#0066cc';
+    }
+  }
+</script>
+<!-- FAQ Section End -->
+<!-- Social Links -->
+<div class="social-links mt-5">
+  <h4>Suivez-nous</h4>
+  <div class="social-icons">
+    <a href="#" class="social-icon" title="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="social-icon" title="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="social-icon" title="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="#" class="social-icon" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</div>
+
+<style>
+  .social-links {
+    text-align: center;
+  }
+
+  .social-links h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: space-around; /* ou space-between */
+    max-width: 800px; /* augmente cette valeur si besoin */
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  .social-icon {
+    font-size: 24px;
+    color: #004080;
+    transition: color 0.3s ease;
+  }
+
+  .social-icon:hover {
+    color: #0066cc;
+  }
+</style>
+
+
+
+<!-- Social Links -->
+
 
     <!-- ... tout le contenu de ta page ... -->
 
@@ -382,20 +773,59 @@
 
 
     <!-- Section Partenaires -->
-    <section id="partenaires" class="partners">
+    <section class="partners">
         <div class="container">
-            <h2>Nos partenaires</h2>
-            <div class="row justify-content-center align-items-center" style="min-height:120px;">
-                <!-- À compléter avec les logos et descriptions reçus -->
-                <div class="col-12 text-center">
-                    <img src="assets/photo4.jpeg" alt="Logo partenaire 1" class="img-fluid" style="max-height: 100px; object-fit: contain; margin: 0 20px;">
-                    <img src="assets/Logo_OIF.svg.png" alt="Logo partenaire 2" class="img-fluid" style="max-height: 100px; object-fit: contain; margin: 0 20px;">
-                    <p class="mt-2">Nos partenaires</p>
+            <h2 class="section-title">Nos Partenaires</h2>
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <img src="assets/auf.jpg" alt="Logo AUF" style="max-height: 60px;">
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="partner-logo">
+                    <img src="assets/cube-removebg-preview.png" alt="Logo AUF" style="max-height: px;">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/Logo_OIF.svg.png" alt="Logo AUF" style="max-height: 60px;">
+                </div>
+                 <div class="partner-logo">
+                    <img src="assets/logo_programme-removebg-preview.png" alt="Logo AUF" style="max-height: 60px;">
+                </div>
+                
+                
+        <style>
+            /* Partners Section */
+        .partners {
+            padding: 60px 0;
+            background: var(--white);
+            text-align: center;
+        }
 
+        .partners-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .partner-logo {
+            width: 120px;
+            height: 80px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--primary-purple);
+            transition: all 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            transform: scale(1.1);
+        }
+        </style>
+    </section>
     <footer class="footer">
         <div class="container">
             <div class="row">
