@@ -36,23 +36,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Hamburger menu toggle
-    const setupHamburgerMenu = () => {
-        const hamburger = document.querySelector('.navbar-toggler');
-        const navMenu = document.querySelector('.navbar-collapse');
-        if (hamburger && navMenu) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('collapsed');
-                navMenu.classList.toggle('show');
-            });
-            document.querySelectorAll('.navbar-nav a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.add('collapsed');
-                    navMenu.classList.remove('show');
-                });
-            });
-        }
-    };
+    
+   // Hamburger menu toggle (mise à jour)
+const setupHamburgerMenu = () => {
+    const toggler = document.querySelector('.navbar-toggler');
+    const collapseMenu = document.querySelector('#navbarNav');
+
+    if (!toggler || !collapseMenu) return;
+
+    toggler.addEventListener('click', () => {
+        collapseMenu.classList.toggle('show');
+    });
+
+    
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 991) {
+                collapseMenu.classList.remove('show');
+                toggler.classList.add('collapsed');
+            }
+        });
+    });
+};
+
 
     // Scroll-triggered animations
     const setupScrollAnimations = () => {
