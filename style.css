@@ -50,7 +50,7 @@ a {
 
 .navbar-brand {
     font-weight: bold;
-    color: var(--primary);
+    color: #ffffff;
 }
 
 .navbar-nav .nav-link {
