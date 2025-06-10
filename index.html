@@ -40,14 +40,14 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-              <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                <img src="assets/logo_programme.jpg" alt="CEF Lomé" height="55">
-            </a>
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#" style="background: none !important; box-shadow: none !important; padding: 0; border-radius: 0; margin-right: 15px;">
+                    <img src="assets/logo_programme.jpg" alt="CEF Lomé" height="55">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="#contexte">Contexte</a>
                         </li>
@@ -67,33 +67,86 @@
                             <a class="nav-link" href="#partners">Partenaires</a>
                         </li>
                     </ul>
-                    <a href="https://shorturl.at/Nu0yJ" class="btn btn-primary cta-button" target="_blank">Postuler</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <section class="hero" style="background-image: url('assets/photo1.jpeg');">
-        <div class="hero-content">
-            <h1>Pré-incubateur CEF Lomé</h1>
-            <p class="lead">Accompagnement entrepreneurial pour les étudiants et jeunes diplômés</p>
-            <div class="hero-stats mb-4">
-                <div class="stat-item">
-                    <h3>6</h3>
-                    <p>Mois de formation</p>
-                </div>
-                <div class="stat-item">
-                    <h3>9</h3>
-                    <p>Modules clés</p>
-                </div>
-                <div class="stat-item">
-                    <h3>25</h3>
-                    <p>Bénéficiaires</p>
-                </div>
-            </div>
-            <a href="https://shorturl.at/Nu0yJ" class="cta-button" target="_blank">Postuler maintenant</a>
+    <section class="hero" style="background-image: url('assets/back.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content hero-left hero-on-image">
+            <h1>Transformer vos idées en entreprise</h1>
+            <a href="https://shorturl.at/Nu0yJ" class="cta-button" target="_blank">S'inscrire</a>
         </div>
     </section>
+    <style>
+    .hero {
+        position: relative;
+        min-height: 400px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        /* Ajout d'un overlay sombre pour lisibilité */
+    }
+    .hero-overlay {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(20, 5, 88, 0.45); /* overlay sombre */
+        z-index: 1;
+    }
+    .hero-content.hero-on-image {
+        position: relative;
+        z-index: 2;
+        max-width: 600px;
+        margin-left: 5vw;
+        text-align: left;
+        /* Pas de fond blanc */
+        padding: 0;
+    }
+    .hero-content.hero-on-image h1 {
+        font-size: 2.5rem;
+        color: #fff;
+        margin-bottom: 30px;
+        font-weight: 700;
+        text-shadow: 0 4px 16px rgba(20,5,88,0.25), 0 2px 8px rgba(0,0,0,0.25);
+    }
+    .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        color: #fff;
+        padding: 14px 36px;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.3s, transform 0.3s;
+        box-shadow: 0 4px 15px rgba(106, 17, 203, 0.2);
+    }
+    .cta-button:hover {
+        background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+        transform: translateY(-2px) scale(1.03);
+    }
+    @media (max-width: 900px) {
+        .hero-content.hero-on-image {
+            max-width: 90vw;
+            margin-left: 0;
+            padding: 0 5vw;
+        }
+        .hero {
+            min-height: 300px;
+        }
+    }
+    @media (max-width: 600px) {
+        .hero-content.hero-on-image {
+            padding: 0 2vw;
+            max-width: 100vw;
+        }
+        .hero-content.hero-on-image h1 {
+            font-size: 1.5rem;
+        }
+    }
+    </style>
 
     <!--section contexte-->     
     <section id="contexte" class="text-center py-5">
@@ -101,11 +154,9 @@
     <h2 class="mb-4">Contexte</h2>
     <p class="mb-3">
       Dans un contexte où le chômage des jeunes diplômés ne cesse de croître, il devient essentiel de mettre en place des initiatives concrètes pour accompagner les jeunes dans leur insertion professionnelle.
-    </p>
-    <p class="mb-3">
+    
       Le Centre d’Entrepreneuriat et de Formation (CEF) de Lomé s’inscrit dans cette dynamique en proposant un programme de pré-incubation qui vise à outiller les jeunes ayant une idée d’entreprise mais manquant de ressources, d’orientation ou de formation pour la concrétiser.
-    </p>
-    <p>
+    
       Ce programme répond au besoin urgent de création d’emplois, de valorisation des talents locaux et de développement d’un écosystème entrepreneurial solide et durable.
     </p>
   </div>
@@ -121,14 +172,11 @@
     <h2 class="mb-4">Pourquoi la Pré-incubateur <strong>CEF-LOMÉ</strong> ?</h2>
     <p class="mb-3">
       Le Pré-incubateur du CEF de Lomé est un programme d’accompagnement destiné aux jeunes étudiants et diplômés qui ont une idée d’entreprise, mais ne savent pas par quoi commencer jusqu’à la concrétisation.
-    </p>
-    <p class="mb-3">
+    
       Le programme va permettre de transformer les idées des jeunes en un projet structuré et concret grâce à des formations pratiques, à du coaching, à du mentorat et des ateliers pratiques. 
-    </p>
-    <p class="mb-3">
+   
       Les bénéficiaires apprendront à construire un business plan, développer un prototype, mieux comprendre le marché, gérer les finances et présenter leur projet devant des partenaires.
-    </p>
-    <p>
+    
       Ce programme vise à renforcer les capacités des jeunes, favoriser la création de petites entreprises tout en restant autonome et surtout préparer les jeunes à intégrer des incubateurs ou à lancer directement leur activité.
     </p>
   </div>
@@ -345,7 +393,7 @@
 <!--section programme end-->
     <section id="modules" class="modules">
   <div class="container">
-    <h2>Programme de formation</h2>
+    <h2>Modules de formation</h2>
     
     <div class="row">
       <div class="col-md-4">
@@ -614,16 +662,14 @@
         <i class="fas fa-envelope" style="font-size: 24px; color: #004080; margin-right: 15px; flex-shrink: 0;"></i>
         <div class="contact-details">
           <h4 style="margin-bottom: 5px;">Email</h4>
-          <p><a href="mailto:contact@cef-lome.org" style="color: inherit; text-decoration: none;">contact@cef-lome.org</a></p>
-          <p><a href="mailto:incubateur@cef-lome.org" style="color: inherit; text-decoration: none;">incubateur@cef-lome.org</a></p>
+          <p><a href="mailto:unipodtogo@gmail.com" style="color: inherit; text-decoration: none;">unipodtogo@gmail.com</a></p>
         </div>
       </div>
       <div class="contact-item" style="display: flex; align-items: flex-start;">
         <i class="fas fa-phone" style="font-size: 24px; color: #004080; margin-right: 15px; flex-shrink: 0;"></i>
         <div class="contact-details">
           <h4 style="margin-bottom: 5px;">Téléphone</h4>
-          <p>+228 20 XX XX XX</p>
-          <p>+228 90 XX XX XX</p>
+          <p>+228 99 47 06 06</p>
         </div>
       </div>
     </div>
@@ -712,48 +758,7 @@
 </script>
 <!-- FAQ Section End -->
 <!-- Social Links -->
-<div class="social-links mt-5">
-  <h4>Suivez-nous</h4>
-  <div class="social-icons">
-    <a href="#" class="social-icon" title="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    
-    <a href="#" class="social-icon" title="LinkedIn">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-    
-  </div>
-</div>
 
-<style>
-  .social-links {
-    text-align: center;
-  }
-
-  .social-links h4 {
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: center; /* ou space-between */
-    max-width: 800px; /* augmente cette valeur si besoin */
-    margin: 0 auto;
-    gap: 40px;
-  }
-
-  .social-icon {
-    font-size: 24px;
-    color: #004080;
-    transition: color 0.3s ease;
-  }
-
-  .social-icon:hover {
-    color: #0066cc;
-  }
-</style>
 
 
 
@@ -827,43 +832,248 @@
         }
         </style>
     </section>
+
+    <div class="social-links mt-5">
+  <h2 class="section-title">Suivez-nous</h2>
+  <div class="social-icons">
+    <a href="#" class="social-icon" title="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="social-icon" title="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+</div>
+
+<style>
+  .social-links {
+    text-align: center;
+  }
+
+  .social-links h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center; /* ou space-between */
+    max-width: 1250px; /* augmente cette valeur si besoin */
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  .social-icon {
+    font-size: 24px;
+    color: #0f0f0f;
+    transition: color 0.3s ease;
+  }
+
+  .social-icon:hover {
+    color: #0066cc;
+  }
+</style>
+
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h4>À propos</h4>
-                    <p>Le Pré-incubateur CEF Lomé accompagne les étudiants et jeunes diplômés dans le développement de leurs projets entrepreneuriaux.</p>
-                </div>
-                <div class="col-md-4">
-                    <h4>Liens rapides</h4>
-                    <ul class="footer-links">
-                        <li><a href="#objectifs">Objectifs</a></li>
-                        <li><a href="#timeline">Programme</a></li>
-                        <li><a href="#modules">Modules</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#partners">Partenaires</a></li>
-                        <li><a href="#">Mentions légales</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4>Newsletter</h4>
-                    <form class="newsletter-form">
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Votre email">
-                            <button class="btn btn-primary" type="submit">S'abonner</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom mt-4">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>&copy; 2025 CEF Lomé. Tous droits réservés.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+  <div class="container">
+    <div class="row footer-main">
+      <div class="col-md-4 footer-about">
+        <h4>À propos</h4>
+        <p>
+          Le Pré-incubateur CEF Lomé accompagne les étudiants et jeunes diplômés dans le développement de leurs projets entrepreneuriaux à travers un programme structuré, du mentorat et des ateliers pratiques.
+        </p>
+      </div>
+      <div class="col-md-4 footer-links">
+        <h4>Liens rapides</h4>
+        <ul>
+          <li><a href="#contexte">Contexte</a></li>
+          <li><a href="#objectifs">Objectifs</a></li>
+          <li><a href="#timeline">Programme</a></li>
+          <li><a href="#modules">Modules</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#partners">Partenaires</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 footer-newsletter">
+        <h4>Newsletter</h4>
+        <form class="newsletter-form">
+          <div class="input-group footer-input-group">
+            <input type="email" class="form-control" placeholder="Votre email" required>
+            <button class="btn btn-primary" type="submit">S'abonner</button>
+          </div>
+        </form>
+       
+      </div>
+    </div>
+    
+  </div>
+  <div class="footer-bottom-custom">
+    <div class="container">
+      <div class="footer-bottom-content">
+        <p class="mb-0">&copy; 2025 CEF Lomé. Tous droits réservés.</p>
+      </div>
+    </div>
+  </div>
+ 
+</footer>
+
+  <style>
+.footer {
+  background: linear-gradient(135deg, #6a11cb 0%, #4f5c72 100%);
+  color: #fff;
+  padding: 60px 0 0 0;
+  font-size: 1rem;
+  margin-top: 60px;
+}
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.footer a:hover {
+  color: #ffd700;
+  text-decoration: none;
+}
+.footer h4 {
+  color: #ffd700;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px 0;
+}
+.footer-about,
+.footer-links,
+.footer-newsletter {
+  margin-bottom: 30px;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+.footer-links ul li a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links ul li a:hover {
+  color: #ffd700;
+}
+.footer-newsletter .footer-input-group {
+  display: flex;
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.footer-newsletter input[type="email"] {
+  border: none;
+  border-radius: 30px 0 0 30px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  min-width: 0;
+  flex: 1 1 auto;
+  outline: none;
+  background: #fff;
+  color: #222;
+}
+.footer-newsletter .btn.btn-primary {
+  border: none;
+  padding: 10px 20px;
+  background: #ffd700;
+  color: #222;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 0 30px 30px 0;
+  min-width: 110px;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.footer-newsletter .btn.btn-primary:hover {
+  background: #fff;
+  color: #6a11cb;
+}
+.footer-social {
+  margin-top: 18px;
+}
+.footer-social-icon {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.4rem;
+  margin-right: 18px;
+  transition: color 0.2s, transform 0.2s;
+}
+.footer-social-icon:last-child {
+  margin-right: 0;
+}
+.footer-social-icon:hover {
+  color: #ffd700;
+  transform: scale(1.15);
+}
+.footer-contact-info {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.08rem;
+}
+.footer-contact-info i {
+  color: #ffd700;
+  margin-right: 6px;
+}
+.footer-contact-info a {
+  color: #fff;
+  text-decoration: underline;
+}
+.footer-contact-info a:hover {
+  color: #ffd700;
+}
+.footer-bottom-custom {
+  width: 100%;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  padding: 0;
+  margin: 0;
+}
+.footer-bottom-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0 5px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.footer-bottom-content p {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+  padding-left: 0;
+}
+@media (max-width: 900px) {
+  .footer-main {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-bottom-content {
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+</style>
+
 
     <!-- Bouton flottant Postuler maintenant -->
     <a href="https://shorturl.at/Nu0yJ"
@@ -999,5 +1209,32 @@
             checkNavbarVisibility();
         });
     </script>
+    <style>
+/* ...autres styles... */
+
+h2,
+.section-title {
+    font-size: 2.5rem !important;
+    color: rgb(20, 5, 88);
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+/* Pour éviter que d'autres styles ne prennent le dessus */
+#objectifs h2,
+#modules h2,
+.timeline .section-title,
+.gallery .section-title,
+#contact h2,
+.faq .section-title,
+#partners .section-title {
+    font-size: 2.5rem !important;
+    color: rgb(20, 5, 88);
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+</style>
 </body>
 </html>
